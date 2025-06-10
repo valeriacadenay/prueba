@@ -1,0 +1,255 @@
+body {
+    background: rgb(0, 0, 0); /*Background black*/
+    font-family: "Space Mono", monospace; /* Font-family monospace export from google */
+    color: aliceblue; /*Color of the font on the body*/
+}
+
+/*Logo inside the header*/
+header img {
+    width: 200px; /* Ancho de la imagen del logo */
+}
+
+/* Encabezado */
+header {
+    background-color: black; /* Fondo negro del header */
+    text-align: center; /* Centra el contenido horizontalmente */
+    display: flex; /*hace que sus elementos se acomoden en fila horizontal*/
+    flex-direction: column;
+    justify-content: center; /*Divide el espacio que queda*/
+    align-items: center; /*se alinea hacia el centro los elementos */
+}
+header nav{
+    text-align: center; 
+}
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;/*permite que los elementos flexibles se envuelvan en varias líneas si el contenido excede el espacio disponible en una sola línea*/
+    justify-content: center;
+    padding: 0;
+    gap: 2rem; /*Separar los elementos de la lista*/
+}
+header nav ul li{
+    list-style: none; /*Se utiliza para elimar el estilo de la lista*/
+}
+
+nav a{
+    text-decoration: none; /*Remove the underline of the list*/
+    color:white;
+}
+nav a:hover{
+    color:red; /*Cuando el mouse pase por los links pasa de color blanco a rojo*/
+}
+
+nav a::before {
+  content: "⟶"; /*Se utiliza para ubicarlo antes del elemento que se encuentra en el hipervinculo a*/
+  margin-right: 5px;
+}
+body{
+    width: 100%;
+}
+
+/* Sección general */
+section {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    text-align: center; /* Centra el texto dentro */
+    padding: 0.5rem; /* Espaciado interno */
+    justify-content: center; /* Solo funciona si se usa display: flex/grid */
+}
+
+#Home{
+    border-bottom: thin solid white; /*linea abajo para dividir la seccion de home y who we are */
+}
+
+.principal{
+    width: 40%;
+    animation: slide-in 5s ease; /* Animación de entrada */
+}
+
+
+
+.content{
+    display: flex; 
+    flex-direction: column;
+}
+/*Section who we are*/
+#weare{
+    display: flex; 
+    flex-direction: column; /*Organiza los elemenos en una columna*/
+    align-items: center;
+    gap: 5rem; /*Separa los elementos*/
+}
+
+#weare div{
+    display: flex;
+    flex-direction:row; /*Organiza los elementos de manera flexible en filas*/
+    gap: 2rem;
+    font-family: "Exile", system-ui; /*Font family exportada de google*/
+}
+
+#weare p{
+    margin-left: 4rem; /*Permite ubicar los elementos mas centrados y no pegados al margen*/
+    margin-right: 4rem;
+}
+
+#weare h2{
+    background-color: red;
+    border-radius: 2rem;
+    font-size: 2em;
+    padding: 2rem;
+}
+#products h2, #contact h2{
+    text-align: center;
+    border-top: thin solid white; /*linea arriba */
+    border-bottom: thin solid white; /*linea abajo */
+    margin: 2rem; /*margen arriba y abajo para el contenido se centre */
+    padding: .5rem 1rem; /*5 es a lo largo y 1a los lados*/
+    color: white;
+    font-size: 3rem;
+}
+
+/*Section products*/
+.grid-products {
+    display: grid; /* Activa Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Crea de 1 a 3 columnas automáticas. Cada columna tiene mínimo 250px debido que el contenedor mide aprox 
+    y crece hasta ocupar 1 fracción del espacio */
+    gap: 2rem; /* Espacio entre columnas */
+    justify-items: center; /* Centra el contenido dentro de cada celda */
+    margin-right: 2rem;
+}
+#products img{
+    width: 80%;
+    filter: drop-shadow(5px 5px 5px #d3d3d3); /* Sombra con color claro */
+}
+
+#products article{
+    border: thin solid white; /*Crea un borde en cada uno de los articulos para separar los elementos visualmente*/
+    border-radius: 2rem;
+}
+
+.cherry img, .besties img{ 
+    border-radius: 50%; /*Crea un borde en las imagenes para que estas sean circulares*/
+    margin-top: 2rem;
+    
+}
+/* Botón de "Comprar" */
+section div button {
+    background-color: #ccc; /* Color gris claro de fondo */
+    color: black; /* Texto negro */
+    margin-bottom: 1rem; /* Separación inferior */
+    border: none; /* Sin bordes */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo manito al pasar encima */
+    font-family: "Space Mono", monospace; /* Fuente */
+}
+
+#products img:hover {
+    transform: scale(1.2); /* Agranda al 120% */
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: auto; /*Crea un margen automatico*/
+    padding: 2rem; /*Crea un relleno de 2rem*/
+    border: thin solid white;
+    background-color: #000000;
+    border-radius: 1rem;
+}
+#contact label{
+    color:white;
+    font-size: 18px;
+}
+#contact input, textarea{
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #ebf0fa;
+    border: none;
+}
+ 
+
+footer{
+    display:flex;
+    justify-content: center;
+    color: whitesmoke;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+}
+
+button:hover{
+    background-color: red;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(10vw); /* Comienza más abajo */
+        opacity: 0; /* Comienza invisible */
+    }
+    to {
+        transform: translateY(0); /* Termina en su lugar */
+    }
+}
+
+@media (max-width:700px) {
+    body {
+        min-width: 700px; /* Evita que se reduzca demasiado el ancho mínimo */
+    }
+}
+
+/*Pantalla de Escritorio*/
+
+@media (max-width: 1024px) {
+    h1, h2, h3 {
+        font-size: 6;
+    }
+    #Home, #weare{
+        flex-direction: column;
+    }
+    .about-text {
+        padding: 0 1rem;
+    }
+    .table-style th,
+    .table-style td {
+        font-size: 12px;
+    }
+}
+
+/*Pantalla de tablet*/
+
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 6;
+    }
+    #Home, #weare{
+        flex-direction: column;
+    }
+    .about-text {
+        padding: 0 1rem;
+    }
+    .table-style th,
+    .table-style td {
+        font-size: 12px;
+    }
+}
+
+/*Pantalla de Móvil*/
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 6;
+    }
+    #Home, #weare{
+        flex-direction: column;
+    }
+    .about-text {
+        padding: 0 1rem;
+    }
+    .table-style th,
+    .table-style td {
+        font-size: 12px;
+    }
+}
+
+

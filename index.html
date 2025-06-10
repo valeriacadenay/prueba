@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadatos del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca cola</title>
+
+    <!-- Conexión anticipada con Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Enlace al archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Header and navigation title-->
+         <img src="imagenes/Coca-Cola-logo.png" alt="Coca-Cola">
+        <nav>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#weare">Who We are</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of the site-->
+    <main>
+        <section id="Home">
+             <img src="imagenes/pngtree-three-bottles-of-coca-cola-png-image_15148128.avif" alt="Botellas de Coca-Cola" class="principal">
+             <h1>Refresh yourself a while with the flavor of a tail coke</h1>
+            </div> 
+        </section>
+        
+        <!--Section who we are-->
+
+        <section id="weare">
+            <div>
+                <h2>Who</h2>
+                <h2>We</h2>
+                <h2>Are</h2>
+            </div>
+            <p>The Coca-Cola Company is a multinational beverage corporation, best known for its iconic soft drink, Coca-Cola. 
+                It has evolved over the years from the first glass of Coca-Cola poured in 1886 to a "total beverage company" with a portfolio of over 200 brands,
+                 including soft drinks, waters, coffee, and teas. 
+            </p>
+        </section>
+
+        <!--Section of products-->
+
+        <section id="products">
+            <h2>Products</h2>
+            <div class="grid-products">
+            <article>
+                <img src="imagenes/ccso_600ml_750x750.webp" alt="Original coke">
+                <h3>Original coke</h3>
+                <p>Originally taste Coca-Cola is the world's favorite soda drink...</p>
+                <button><strong>Buy</strong></button>
+            </article>
+
+            <article>
+                <img src="imagenes/1-3.webp" alt="coca-cola cafe">
+                <h3>Coca-Cola with Coffee</h3>
+                <p>This fusion of flavors combines the classic refreshment of Coca-Cola with the energy of coffee...</p>
+                <button><strong>Buy</strong></button>
+            </article>
+
+            <article class="zero">
+                <img src="imagenes/coca-cola-zero-europea-330ml.jpg" alt="coca-cola zero">
+                <h3>Coke Zero</h3>
+                <p>Coke zero sugar is flavor Coca-Cola without providing any sugar...</p>
+                <button><strong>Buy</strong></button>
+            </article>
+
+            <article class="cherry">
+                <img src="imagenes/5449000240248_1_512x512_20240619.png" alt="coca-cola zero cherry">
+                <h3>Coke Zero Cherry.</h3>
+                <p>Coke Zero Cherry is the fusion of the best of Cola with the sweet taste of cherry and sugar-free and calorie-free. 
+                    It contains sweeteners that give it the sweet taste that characterizes it. </p>
+                <button><strong>Buy</strong></button>
+            </article>
+
+            <article>
+                <img src="imagenes/vainilla" alt="coke vanilla">
+                <h3>Vanilla Coke</h3>
+                <p>Enjoy the crisp and refreshing taste of Coca‑Cola with a hint of vanilla flavor.</p>
+                <button><strong>Buy</strong></button>
+            </article>
+
+            <article>
+                <img src="imagenes/vainillazero" alt="vanillazero">
+                <h3>Coca‑Cola Vanilla Zero Sugar</h3>
+                <p>Enjoy the crisp and refreshing taste of Coca‑Cola with zero calories and a hint of vanilla flavor.</p>
+                <button><strong>Buy</strong></button>
+            </article>
+
+            <article>
+                <img src="imagenes/Diet-Coke-Caffeine-Free-1.webp" alt="caffeine-free">
+                <h3>Caffeine-free Diet Coke</h3>
+                <p>Caffeine-Free Coca-Cola, Caffeine Free Diet Coke and Coca-Cola Zero Sugar Caffeine Free are caffeine-free variants of Coca-Cola.
+                It was introduced to compete against Pepsi Free, which is now called Caffeine-Free Pepsi. </p>
+                <button><strong>Buy</strong></button>
+            </article>
+
+            <article>
+                <img src="imagenes/Diet-Coke.png" alt="Diet-Coke">
+                <h3> Diet Coke</h3>
+                <p>There's breaks and then there's a Diet Coke break. There's nothing like that electric, ice-cold, 'crispy' taste to turn that moment to yourself into 
+                a moment of delight. So don't just make time. Make it your time. With a Diet Coke.</p>
+                <button><strong>Buy</strong></button>
+            </article>
+
+            <article>
+                <img src="imagenes/ccso_600ml_750x750.webp" alt="Mexican coke">
+                <h3>Mexican Coke</h3>
+                <p>It is known as Coca Cola de vidrio, Mexican Coca-Cola (Mexican Coca Cola), Mexican Coke or (informally) Mexicoke to the Coca Cola available 
+                    in the United States and Canada that is produced in Mexico.</p>
+                    <button><strong>Buy</strong></button>
+            </article>
+
+            <article class="besties">
+                <img src="imagenes/width1960.webp" alt="coke besties">
+                <h3> Coca‑Cola Besties </h3>
+                <p>Coca‑Cola Zero Sugar OREO Limited Edition Creations is a delicious duo that celebrates friendship with every sip. 
+                    We combined the best traits of Coca‑Cola® Zero Sugar and OREO® to help you find a new friend with all the flavor.</p>
+                    <button><strong>Buy</strong></button>
+            </article>
+            </div>
+        </section>
+        <!--Section of contact-->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="/send" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Name"/>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email" />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Message"></textarea>
+                <input class="boton" type="submit" value="Send" />
+            </form>
+        </section>
+    </main>
+
+    <!--Footer of the page-->
+    <footer>
+    <p>&copy; 2025 Valeria. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
